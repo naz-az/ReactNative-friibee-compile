@@ -3,6 +3,7 @@ import {View,Text,Image,ImagBackground, ImageBackground} from 'react-native';
 import Icon from "@expo/vector-icons/Entypo"
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import { BlurView } from 'expo-blur';
+import { LinearGradient } from 'expo-linear-gradient';
 
 
 
@@ -18,8 +19,11 @@ export default class Posts extends React.Component{
         const {name,profile,photo,onPress} = this.props  
 
         return(
-            <BlurView intensity={100} style={{//backgroundColor: "gray", 
-            marginVertical: 10, paddingHorizontal: 10, paddingBottom: 15, borderRadius:20}}>
+            
+            <View style= {{backgroundColor: "#F2653040", borderRadius: 20}}>
+             {/* <LinearGradient colors={['#d11d1d', '#da3421', '#e24625', '#ea562a', '#f26530']} style={{borderRadius:20}}> */}
+            <BlurView intensity={100} BlurTint={"dark"} style={{//backgroundColor: "black", 
+            marginVertical: 0, paddingHorizontal: 10, paddingBottom: 15, borderRadius:20}}>
                <View style={{
                    flexDirection:"row",
                    paddingTop:15,
@@ -128,6 +132,8 @@ export default class Posts extends React.Component{
                     </ImageBackground>
                </View>
             </BlurView>
+            </View>
+            
         )
     }
 }

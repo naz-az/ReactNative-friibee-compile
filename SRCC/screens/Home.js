@@ -2,7 +2,8 @@ import React from 'react';
 import {View,Text,Image,ImageBackground,TouchableOpacity, Dimensions, SafeAreaView} from 'react-native';
 import {ScrollView,TextInput} from 'react-native-gesture-handler';
 import Icon from '@expo/vector-icons/Entypo';
-import Posts from '../screens/Posts'
+import Posts from '../screens/Posts';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const windowheight = Dimensions.get('window').height
 
@@ -22,9 +23,8 @@ export default class Home extends React.Component{
             style={{
                 height:"100%",
                 //backgroundColor:"#F2653040"
-            }}
-          >
-                <View style={{backgroundColor: "#F2653040"}}> 
+            }}>
+                <View style={{backgroundColor: "white"}}> 
                 <View style={{
                     
                     height: 0.22*windowheight,
@@ -97,7 +97,7 @@ export default class Home extends React.Component{
     
                 </View>
               <View style={{
-                  backgroundColor:"#F2653040",
+                  backgroundColor:"white",
                   //borderTopLeftRadius:40,
                   //borderTopRightRadius:40,
                   height:1550,
@@ -107,10 +107,12 @@ export default class Home extends React.Component{
                   borderBottomLeftRadius:40,
                   borderBottomRightRadius:40,
               }}>
-                  <View style={{
+                  <View style={{flexDirection:"row", paddingVertical:10, marginVertical: 0,}} >
+                  <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{
                       flexDirection:"row",
-                      paddingVertical:10,
-                      justifyContent: 'center',
+                      paddingVertical:0,
+                      marginVertical: 0,
+                      //justifyContent: 'center',
                       //backgroundColor: "#F2653033",
                   }}>
                       <TouchableOpacity
@@ -157,11 +159,76 @@ export default class Home extends React.Component{
                               color:this.state.popularSelected ? "#9ca1a2":"#F26530"
                           }}>TRENDING</Text>
                       </TouchableOpacity>
+
+                      <TouchableOpacity
+                        onPress={this.onTabPressed}
+                        style={{
+                            borderBottomColor:this.state.popularSelected ? "#FFF":"#F2653066",
+                            borderBottomWidth:4,
+                            paddingVertical:6,
+                            marginLeft:30
+                        }}
+                      >
+                          <Text style={{
+                              fontFamily:"Bold",
+                              color:this.state.popularSelected ? "#9ca1a2":"#F26530"
+                          }}>CATEGORY 1</Text>
+                      </TouchableOpacity>
+
+                      <TouchableOpacity
+                        onPress={this.onTabPressed}
+                        style={{
+                            borderBottomColor:this.state.popularSelected ? "#FFF":"#F2653066",
+                            borderBottomWidth:4,
+                            paddingVertical:6,
+                            marginLeft:30
+                        }}
+                      >
+                          <Text style={{
+                              fontFamily:"Bold",
+                              color:this.state.popularSelected ? "#9ca1a2":"#F26530"
+                          }}>CATEGORY 2</Text>
+                      </TouchableOpacity>
+
+                      <TouchableOpacity
+                        onPress={this.onTabPressed}
+                        style={{
+                            borderBottomColor:this.state.popularSelected ? "#FFF":"#F2653066",
+                            borderBottomWidth:4,
+                            paddingVertical:6,
+                            marginLeft:30
+                        }}
+                      >
+                          <Text style={{
+                              fontFamily:"Bold",
+                              color:this.state.popularSelected ? "#9ca1a2":"#F26530"
+                          }}>CATEGORY 3</Text>
+                      </TouchableOpacity>
+
+                      <TouchableOpacity
+                        onPress={this.onTabPressed}
+                        style={{
+                            borderBottomColor:this.state.popularSelected ? "#FFF":"#F2653066",
+                            borderBottomWidth:4,
+                            paddingVertical:6,
+                            marginLeft:30
+                        }}
+                      >
+                          <Text style={{
+                              fontFamily:"Bold",
+                              color:this.state.popularSelected ? "#9ca1a2":"#F26530"
+                          }}>CATEGORY 4</Text>
+                      </TouchableOpacity>
+
+                  </ScrollView>
                   </View>
 
-                  <View style={{
-                      flexDirection:"row"                    
+                  {/* Start of Posts Scrolling lists */}
+
+                  <View style={{ 
+                      flexDirection:"row", marginVertical: 10, borderRadius: 20,                     
                   }}>
+                      {/* <LinearGradient colors={['#d11d1d', '#da3421', '#e24625', '#ea562a', '#f26530']}>  */}
                       <Posts
                         onPress={()=>this.props.navigation.navigate('Detail')}
                         name="Mohan"
@@ -180,7 +247,7 @@ export default class Home extends React.Component{
                       }}>
 
                       </View> */}
-
+                    {/* </LinearGradient> */}
                   </View>
 
 
@@ -190,7 +257,7 @@ export default class Home extends React.Component{
                       //backgroundColor: "purple"
                   }}>
                      
-                      <View style={{
+                      {/* <View style={{
                           height:160,
                           backgroundColor:"#F26530",
                           width:20,
@@ -201,7 +268,7 @@ export default class Home extends React.Component{
                           borderBottomRightRadius:20
                       }}>
 
-                      </View>
+                      </View> */}
 
                       <Posts
                         onPress={()=>this.props.navigation.navigate('Detail')}
@@ -222,7 +289,7 @@ export default class Home extends React.Component{
                         photo={require('../images/nikeshoes.jpg')}
                       />
 
-                      <View style={{
+                      {/* <View style={{
                           height:160,
                           backgroundColor:"#F26530",
                           width:20,
@@ -230,15 +297,16 @@ export default class Home extends React.Component{
                           marginTop:120,
                           borderTopLeftRadius:20,
                           borderBottomLeftRadius:20
-                      }}>
+                      }}> 
 
-                      </View>
+                      </View> */}
 
                   </View>
               </View>
-
-          </ScrollView>
-          //</SafeAreaView>
+              
+              </ScrollView>
+              
+                        //</SafeAreaView>
         )
     }
 }
