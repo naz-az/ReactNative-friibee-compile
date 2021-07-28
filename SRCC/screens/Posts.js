@@ -2,6 +2,8 @@ import React from 'react';
 import {View,Text,Image,ImagBackground, ImageBackground} from 'react-native';
 import Icon from "@expo/vector-icons/Entypo"
 import {TouchableOpacity} from 'react-native-gesture-handler';
+import { BlurView } from 'expo-blur';
+
 
 
 export default class Posts extends React.Component{
@@ -13,23 +15,24 @@ export default class Posts extends React.Component{
     }
     render(){
 
-        const {name,profile,photo,onPress} = this.props
+        const {name,profile,photo,onPress} = this.props  
 
         return(
-            <View>
+            <BlurView intensity={100} style={{//backgroundColor: "gray", 
+            marginVertical: 10, paddingHorizontal: 10, paddingBottom: 15, borderRadius:20}}>
                <View style={{
                    flexDirection:"row",
-                   paddingTop:25,
+                   paddingTop:15,
                    alignItems:"center",
-                            
+                                               
                 }}>
-                    <TouchableOpacity style={{width:"20%"}}>
+                    <TouchableOpacity style={{width:"100%"}}>
                             <Image
                                 source={profile} 
                                 style={{
                                     width:55,
                                     height:55,
-                                    borderRadius:13
+                                    borderRadius:100
                                 }}
                                 />
                     </TouchableOpacity>
@@ -40,7 +43,7 @@ export default class Posts extends React.Component{
                             fontFamily:"Bold",
                             fontSize:14,
                             color:"#862906",
-                            marginLeft:50,
+                            marginLeft:20,
                         }}>{name}</Text>
 
                         
@@ -49,7 +52,7 @@ export default class Posts extends React.Component{
                             fontFamily:"Medium",
                             fontSize:12,
                             color:"#9ca1a2",
-                            marginLeft:50,
+                            marginLeft:20,
                         }}>
                             5 mins ago
                         </Text>
@@ -69,7 +72,8 @@ export default class Posts extends React.Component{
                <View style={{
                    flexDirection:"row",
                    width:"100%",
-                   paddingTop:20
+                   paddingTop:20,
+                   //backgroundColor: "black"
                }}>
                     <ImageBackground 
                     source={photo}
@@ -78,7 +82,7 @@ export default class Posts extends React.Component{
                         height:380,
                     }}
                     imageStyle={{
-                        borderRadius:50
+                        borderRadius:20
                     }}
                     >
                         <View style={{
@@ -123,7 +127,7 @@ export default class Posts extends React.Component{
                         </View>
                     </ImageBackground>
                </View>
-            </View>
+            </BlurView>
         )
     }
 }

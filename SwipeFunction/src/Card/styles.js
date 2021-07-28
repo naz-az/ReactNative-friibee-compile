@@ -1,16 +1,24 @@
   
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 import { CARD } from '../utils/constants';
+
+const dimensions = Dimensions.get('window');
+// const imageHeight = dimensions.height;
+const imageHeight = Math.round(dimensions.height * 9 / 16);
+const imageWidth = 0.95*dimensions.width;
 
 export const styles = StyleSheet.create({
   container: {
     position: 'absolute',
-    top: 130,
+    top: 100,
   },
   image: {
-    width: 500,
-    height: 570,
+    //right: dimensions.width,
+    //left: 0.05*dimensions.width,
+    width: imageWidth,
+    height: imageHeight,
     borderRadius: CARD.BORDER_RADIUS,
+    resizeMode: 'cover',
   },
   gradient: {
     position: 'absolute',

@@ -38,8 +38,8 @@ export default function App() {
           height: 60,
           borderBottomLeftRadius: 0,
           borderBottomRightRadius: 0,
-          borderTopLeftRadius: 20,
-          borderTopRightRadius: 20,
+          //borderTopLeftRadius: 20,
+          //borderTopRightRadius: 20,
           // Shadow...
           shadowColor: '#6D2903',
           shadowOpacity: 0.08,
@@ -74,7 +74,7 @@ export default function App() {
           // Onpress Update....
           tabPress: e => {
             Animated.spring(tabOffsetValue, {
-              toValue: 0,
+              toValue: -15,
               useNativeDriver: true
             }).start();
           }
@@ -124,7 +124,7 @@ export default function App() {
                 borderRadius: 20,
                 justifyContent: 'center',
                 alignItems: 'center',
-                marginBottom: Platform.OS == "android" ? 50 : 30
+                //marginBottom: Platform.OS == "android" ? 0 : 0
               }}>
                 <Image source={require('./assets/plus.png')} style={{
                   width: 22,
@@ -241,7 +241,7 @@ function HomeScreen() {
 function NotificationScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Notifications!</Text>
+      <Text>Notificationssss!</Text>
     </View>
   );
 }

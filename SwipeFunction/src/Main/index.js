@@ -68,6 +68,7 @@ export default function Main() {
 
   return (
     <View style={styles.container}>
+      
       {pets
         .map(({ name, source }, index) => {
           const isFirst = index === 0;
@@ -89,5 +90,6 @@ export default function Main() {
 
       <Footer handleChoice={handleChoice} />
     </View>
+    
   );
 }
