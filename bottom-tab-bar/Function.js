@@ -7,6 +7,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import HomePage from '../HomePage';
 import SwipePage from '../SwipePage';
+import NotificationPage from '../NotificationPage';
 
 // Plus...
 //import plus from './assets/plus.png'
@@ -240,9 +241,7 @@ function HomeScreen() {
 
 function NotificationScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Notificationssss!</Text>
-    </View>
+    <NotificationPage/>
   );
 }
 
