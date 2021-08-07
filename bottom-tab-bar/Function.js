@@ -8,6 +8,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import HomePage from '../HomePage';
 import SwipePage from '../SwipePage';
 import NotificationPage from '../NotificationPage';
+import SettingPage from '../SettingPage';
 
 // Plus...
 //import plus from './assets/plus.png'
@@ -39,8 +40,8 @@ export default function App() {
           height: 60,
           borderBottomLeftRadius: 0,
           borderBottomRightRadius: 0,
-          //borderTopLeftRadius: 20,
-          //borderTopRightRadius: 20,
+          borderTopLeftRadius: 20,
+          borderTopRightRadius: 20,
           // Shadow...
           shadowColor: '#6D2903',
           shadowOpacity: 0.08,
@@ -75,7 +76,7 @@ export default function App() {
           // Onpress Update....
           tabPress: e => {
             Animated.spring(tabOffsetValue, {
-              toValue: -15,
+              toValue: 0,
               useNativeDriver: true
             }).start();
           }
@@ -125,7 +126,7 @@ export default function App() {
                 borderRadius: 20,
                 justifyContent: 'center',
                 alignItems: 'center',
-                //marginBottom: Platform.OS == "android" ? 0 : 0
+                marginBottom: Platform.OS == "android" ? 50 : 30
               }}>
                 <Image source={require('./assets/plus.png')} style={{
                   width: 22,
@@ -227,9 +228,7 @@ function EmptyScreen() {
 
 function SettingsScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
-    </View>
+    <SettingPage/>
   );
 }
 
