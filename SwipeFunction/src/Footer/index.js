@@ -14,6 +14,12 @@ export default function Footer({ handleChoice }) {
         color={COLORS.nope}
         onPress={() => handleChoice(-1)}
       />
+  <RoundButton
+        name="star"
+        size={34}
+        color={COLORS.star}
+        onPress={() => handleChoice(0)}
+      />
       <RoundButton
         name="heart"
         size={34}
