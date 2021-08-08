@@ -12,6 +12,7 @@ export const CARD = {
 export const COLORS = {
   like: '#00eda6',
   nope: '#ff006f',
+  star: '#82E0DB'
 };
 
 export const ACTION_OFFSET = 100;
