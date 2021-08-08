@@ -5,10 +5,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { LinearGradient } from 'expo-linear-gradient';
 
-import HomePage from '../HomePage';
-import SwipePage from '../SwipePage';
-import NotificationPage from '../NotificationPage';
-import SettingPage from '../SettingPage';
+import HomePage from '../HomePage/HomePage';
+import SwipePage from '../SwipeFunction/SwipePage';
+import NotificationPage from '../NotificationPage/NotificationPage';
+import SettingPage from '../SettingPage/SettingPage';
 
 // Plus...
 //import plus from './assets/plus.png'

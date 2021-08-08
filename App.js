@@ -64,15 +64,18 @@
 
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Main from './SwipeFunction/src/Main';
+import 'react-native-gesture-handler';
+
+import Function from './bottom-tab-bar/Function';
+
 
 export default function App() {
-  return (
-    <>
-      <Main />
-      <StatusBar style="auto" />
-    </>
-  );
-}
+    return (
+      <>
+      
+        <Function />
+        <StatusBar style="auto" />
+      </>
+    );
+  }
 
