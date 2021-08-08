@@ -2,7 +2,7 @@ import React from 'react';
 import {View, StyleSheet, Text, Image, ScrollView} from 'react-native';
 
 import Inputs from '../components/Inputs';
-import Submit from '../components/Submit';
+import SubmitLogin from '../components/Submit_SignIn';
 import Account from '../components/Account';
 
 const Login = props => {
@@ -21,7 +21,7 @@ const Login = props => {
                 <View style={{marginTop: 20}} />
                 <Inputs name="EMAIL or USERNAME" icon="user" />
                 <Inputs name="PASSWORD" icon="lock" pass={true} />
-                <Submit title="LOG IN" color="#F26530" />
+                <SubmitLogin title="LOG IN" color="#F26530" />
                 
                 <View style={{width: '90%', marginTop: 10, marginBottom: 10, flexDirection: 'row'}}>
                     <View style={{flex:1}}>

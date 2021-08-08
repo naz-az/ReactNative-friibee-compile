@@ -2,7 +2,7 @@ import React from 'react';
 import {View, StyleSheet, Text, ScrollView, Image} from 'react-native';
 
 import Input from '../components/Inputs';
-import Submit from '../components/Submit';
+import SubmitSignUp from '../components/Submit_SignUp';
 
 const SignUp = props => {
     return (
@@ -21,7 +21,7 @@ const SignUp = props => {
                 <Input name="PHONE" icon="phone" />
                 <Input name="PASSWORD" icon="lock" pass={true} />
                 <Input name="CONFIRM PASSWORD" icon="lock" pass={true} />
-                <Submit color="#F26530" title="CREATE NEW ACCOUNT" />
+                <SubmitSignUp color="#F26530" title="CREATE NEW ACCOUNT" />
                 <View style={{flexDirection: 'row'}}>
                     <Text style={styles.textBody}>Already a member? </Text>
                     <Text style={[styles.textBody, {color: '#972910'}]} onPress={() => props.navigation.navigate('Home')}> Sign In</Text>
