@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
   },
   image: {
     width: 500,
-    height: 37563783,
+    height: 3000,
     borderRadius: CARD.BORDER_RADIUS,
   },
   gradient: {
