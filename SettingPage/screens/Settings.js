@@ -17,7 +17,7 @@ import { Fontisto } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 
-const Login = props => {
+const Settings = props => {
     const [isSwitchEnabled, setSwitch] = React.useState(false)
 
     return (
@@ -633,4 +633,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default Login
+export default Settings
