@@ -23,13 +23,13 @@ export default class Posts extends React.Component{
                    alignItems:"center",
                             
                 }}>
-                    <TouchableOpacity style={{width:"20%"}}>
+                    <TouchableOpacity style={{width:"100%"}}>
                             <Image
                                 source={profile} 
                                 style={{
                                     width:55,
                                     height:55,
-                                    borderRadius:13
+                                    borderRadius:100
                                 }}
                                 />
                     </TouchableOpacity>
@@ -40,7 +40,7 @@ export default class Posts extends React.Component{
                             fontFamily:"Bold",
                             fontSize:14,
                             color:"#862906",
-                            marginLeft:50,
+                            marginLeft:20,
                         }}>{name}</Text>
 
                         
@@ -49,14 +49,17 @@ export default class Posts extends React.Component{
                             fontFamily:"Medium",
                             fontSize:12,
                             color:"#9ca1a2",
-                            marginLeft:50,
+                            marginLeft:20,
                         }}>
                             5 mins ago
                         </Text>
                     </View>
                     <View style={{
                         width:"30%",
-                        alignItems:"flex-end"
+                        alignItems:"flex-end",
+                        //marginRight: 20,
+                        //This is a temporary fix to move the sound mix icon inwards from the right, figure out a better way to do this
+                        paddingRight: 40,
                     }}>
                         <Icon
                             name="sound-mix"

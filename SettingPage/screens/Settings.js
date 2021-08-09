@@ -15,12 +15,14 @@ import Subscription from '../components/Subscription';
 import { Entypo } from '@expo/vector-icons';
 import { Fontisto } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 const Settings = props => {
     const [isSwitchEnabled, setSwitch] = React.useState(false)
 
     return (
+        <SafeAreaView>
         <ScrollView style={{backgroundColor: 'white'}}>
             <View style={styles.container}>
                 
@@ -28,7 +30,7 @@ const Settings = props => {
                 <View style={[styles.margin]}>
                 <Text style={styles.textTitle}>Settings</Text>
                 </View>
-                <View style={{marginTop: 20}} />
+                <View style={{marginTop: 10}} />
 
                 <View style={[styles.margin]}>
                 <Text style={styles.subTitle}>User Setting</Text>
@@ -538,7 +540,8 @@ const Settings = props => {
             <View style={{marginTop: 50}} />
                 
             </View>
-        </ScrollView>      
+        </ScrollView>   
+        </SafeAreaView>   
     );
 };
 
@@ -546,7 +549,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        //marginTop: 30,
     },
     image: {
         width: 200,

@@ -1,6 +1,9 @@
   
 import { StyleSheet } from 'react-native';
 import { CARD } from '../utils/constants';
+import { Dimensions } from 'react-native';
+
+//width = ;
 
 export const styles = StyleSheet.create({
   container: {
@@ -8,8 +11,8 @@ export const styles = StyleSheet.create({
     top: 130,
   },
   image: {
-    width: 500,
-    height: 3000,
+    width: Dimensions.get('window').width*0.9,
+    height: Dimensions.get('window').width*0.9,
     borderRadius: CARD.BORDER_RADIUS,
   },
   gradient: {
