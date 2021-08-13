@@ -22,7 +22,7 @@ export default class Home extends React.Component{
             }}
           >
               <View style={{
-                  height:260,
+                  height:200,
                   width:"100%",
                   paddingHorizontal:35
               }}>
@@ -57,17 +57,19 @@ export default class Home extends React.Component{
                     fontFamily:"Medium",
                     fontSize:16,
                     color:"#fff1e1",
-                    paddingVertical:20
-                }}>We help you find the best deals around</Text>
+                    marginBottom: 10,
+                    textAlign: 'center'
+                    }}>We help you find the best deals around!</Text>
 
                 <View style={{
                     flexDirection:"row",
                     borderColor:"#9ca1a2",
-                    borderRadius:15,
+                    borderRadius:5,
                     borderWidth:0.2,
                     paddingVertical:7,
                     alignItems:"center",
-                    backgroundColor:"white"
+                    backgroundColor:"white",
+                    marginTop: 5
                 }}>
                     <TextInput
                         placeholder="search deals ..."
@@ -75,7 +77,7 @@ export default class Home extends React.Component{
                             paddingHorizontal:10,
                             fontFamily:"Medium",
                             fontSize:18,
-                            width:"93%",
+                            width:"85%",
                             color:"#797979",
                             backgroundColor:"white",
                             marginLeft:10,
@@ -83,6 +85,7 @@ export default class Home extends React.Component{
                     />
                     <Icon name="magnifying-glass"
                           size={18}
+                          alignContent = "flex-end"
                           color="#797979"/>
                 </View>
 
@@ -101,7 +104,8 @@ export default class Home extends React.Component{
               }}>
                   <View style={{
                       flexDirection:"row",
-                      paddingTop:20
+                      paddingTop:15,
+                      justifyContent: 'center'
                   }}>
                       <TouchableOpacity
                         onPress={this.onTabPressed}

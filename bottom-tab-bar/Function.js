@@ -126,7 +126,7 @@ export default function App() {
                 borderRadius: 20,
                 justifyContent: 'center',
                 alignItems: 'center',
-                marginBottom: Platform.OS == "android" ? 50 : 30
+                //marginBottom: Platform.OS == "android" ? 50 : 30
               }}>
                 <Image source={require('./assets/plus.png')} style={{
                   width: 22,

@@ -11,6 +11,7 @@ import Rectangle from '../components/Rectangle';
 import Connect from '../components/Connect';
 import BNU from '../components/BNU';
 import Subscription from '../components/Subscription';
+import AccordionListItem from '../AccordionList/accordionlist';
 
 import { Entypo } from '@expo/vector-icons';
 import { Fontisto } from '@expo/vector-icons';
@@ -35,7 +36,7 @@ const Settings = props => {
                 <View style={[styles.margin]}>
                 <Text style={styles.subTitle}>User Setting</Text>
                 </View>
-                <View style={{marginTop: 20}} />
+                <View style={{marginTop: 10}} />
                 
                 
 
@@ -115,7 +116,7 @@ const Settings = props => {
                     </View> 
                 </View> */}
 
-<View style={{width: '85%', paddingTop:20, paddingBottom:10}}>
+<View style={{width: '95%', paddingTop:20, paddingBottom:10}}>
                 <Text style={[styles.textBody]}>About Me</Text>
                 </View>
                 <Rectangle name="Write a brief description of yourself..." icon="file-text-o" />
@@ -138,7 +139,7 @@ const Settings = props => {
                                 name="link" size={24} color="black" />
                         </TouchableOpacity>
 
-
+                        
                         <TouchableOpacity style={[styles.square]}>
                         <Fontisto style={{marginVertical:6,marginHorizontal:6}} 
                                 name="smiley" size={24} color="black" />
@@ -160,13 +161,13 @@ const Settings = props => {
                    alignItems:"center",
                             
                 }}>
-                    <View style={{width:"40%"}}>
+                    <View style={{width:"60%"}}>
                     <Text style={[styles.textBody]}>Deactivate Account</Text>
        
                     </View>
                    
                     <View style={{
-                        width:"60%",
+                        width:"40%",
                         alignItems:"flex-end"
                     }}>
                         <TouchableOpacity style={{flexDirection:"row" }}>
@@ -177,6 +178,8 @@ const Settings = props => {
                </View>
 
             <View style={{marginBottom:40}}></View>
+
+ {/* Social Network Setting */}
 
             <View style={[styles.margin]}>
                 <Text style={styles.subTitle}>Social Network Setting</Text>
@@ -190,12 +193,12 @@ const Settings = props => {
                    //paddingTop:5, 
                         }}>
 
-                    <View style={{width:"40%"}}>
+                    <View style={{width:"60%"}}>
                     <Text style={[styles.textBody]}>Connect to Facebook</Text>
                    
                     </View>
                 
-                    <View style={{width:"60%", alignItems:"flex-end"}}>
+                    <View style={{width:"40%", alignItems:"flex-end"}}>
                     <Connect color="white" icon="facebook" title="Facebook" />
                     </View>
             </View>
@@ -245,21 +248,22 @@ const Settings = props => {
                    alignItems:"center",
                             
                 }}>
-                    <View style={{width:"40%"}}>
+                    <View style={{width:"60%"}}>
                     <Text style={[styles.textBody]}>Connect to Instagram</Text>
               
                     </View>
                    
                     <View style={{
-                        width:"60%",
+                        width:"40%",
                         alignItems:"flex-end"
                     }}>
                        <Connect color="white" icon="instagram" title="Instagram"/>
                     </View>
                </View>
 
+               {/* This is a temporary fix to move the sound mix icon inwards from the right, figure out a better way to do this */}
 
-               <View style={{marginTop: 40}} />
+               <View style={{marginTop: 20}} />
 
                 <View style={[styles.margin]}>
                 <Text style={styles.subTitle}>Safety and Privacy Setting</Text>
@@ -293,6 +297,17 @@ const Settings = props => {
                     </View>
                </View>
         
+                
+               {/* <View>
+                <AccordionListItem title={'Privacy'}>
+                <Text>Some body text!</Text>
+                <Switch style={[styles.switch]}
+                value={isSwitchEnabled}
+                onValueChange={(value) => setSwitch(value)}
+                trackColor={{true:'#94E8E0'}}
+                />
+                </AccordionListItem>
+             </View> */}
                 
                  <View style={{marginTop: 10}} />
                 <Text style={[styles.title]}>PRIVACY</Text>
@@ -504,6 +519,7 @@ const Settings = props => {
 
 <View style={{marginBottom:80}}></View>
 
+
 <View style={[styles.margin]}>
 <Text style={styles.subTitle}>Subscription Setting</Text>
 </View>
@@ -594,7 +610,7 @@ const styles = StyleSheet.create({
    
 
     margin: {
-        width: '85%'
+        width: '90%'
         
     },
     textBody: {
