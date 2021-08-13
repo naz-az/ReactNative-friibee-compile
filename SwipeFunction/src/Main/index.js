@@ -88,7 +88,7 @@ export default function Main() {
         })
         .reverse()}
 
-      <Footer handleChoice={handleChoice} />
+      <Footer handleChoice={handleChoice}  />
     </View>
   
   );
